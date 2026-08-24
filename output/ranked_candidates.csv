@@ -1,0 +1,193 @@
+source_file,candidate_name,email,phone,experience_years,education_summary,text,final_score,nlp_score,skill_score,experience_score,education_score,jd_skills,skills,matched_skills,missing_skills,reasoning,experience_years_display,rank
+01_Aarav_Sharma.txt,Aarav Sharma,aarav.sharma@example.test,,3.0,B.Tech in Artificial Intelligence and Data Science,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Aarav Sharma
+aarav.sharma@example.test
+
+SUMMARY
+Technical professional with 3 years of experience.
+
+SKILLS
+Python, SQL, scikit-learn, pandas, NumPy, NLP, machine learning, generative AI, LLM, RAG, LangChain, Flask, FastAPI, REST API, Git, GitHub, Docker, statistics
+
+EXPERIENCE
+Relevant technical experience — 3 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.Tech in Artificial Intelligence and Data Science",59.764673882261036,25.792842545375404,94.73684210526315,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","api, docker, fastapi, flask, generative ai, git, github, langchain, llm, machine learning, nlp, numpy, pandas, python, rag, rest api, scikit-learn, sql, statistics","api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, python, rag, rest api, scikit-learn, sql, statistics",prompt engineering,**59.76/100.** Strengths: strong skill coverage (18 matched); meets the 1-year requirement. Gaps: low NLP relevance; education requirement was not matched. Missing JD skills: prompt engineering.,3.0 years,1
+11_Zoya_Malik.txt,Zoya Malik,zoya.malik@example.test,,2.0,M.Tech in Artificial Intelligence and Data Science,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Zoya Malik
+zoya.malik@example.test
+
+SUMMARY
+Technical professional with 2 years of experience.
+
+SKILLS
+Python, SQL, machine learning, NLP, generative AI, LLM, RAG, transformers, prompt engineering, LangChain, scikit-learn, pandas, NumPy, FastAPI, REST API, Git, Docker
+
+EXPERIENCE
+Relevant technical experience — 2 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+M.Tech in Artificial Intelligence and Data Science",56.08046335594524,25.792842545375404,84.21052631578947,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","api, docker, fastapi, generative ai, git, langchain, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, transformers","api, docker, fastapi, generative ai, git, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql","flask, github, statistics","**56.08/100.** Strengths: strong skill coverage (16 matched); meets the 1-year requirement. Gaps: low NLP relevance; education requirement was not matched. Missing JD skills: flask, github, statistics.",2.0 years,2
+04_Sana_Khan.txt,Sana Khan,sana.khan@example.test,,2.0,B.Tech in Artificial Intelligence,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Sana Khan
+sana.khan@example.test
+
+SUMMARY
+Technical professional with 2 years of experience.
+
+SKILLS
+Python, SQL, NLP, natural language processing, machine learning, deep learning, generative AI, LLM, transformers, RAG, PyTorch, pandas, NumPy, Git, GitHub, FastAPI
+
+EXPERIENCE
+Relevant technical experience — 2 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.Tech in Artificial Intelligence",48.129159885411,20.403981031907488,68.42105263157895,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","api, deep learning, fastapi, generative ai, git, github, llm, machine learning, natural language processing, nlp, numpy, pandas, python, pytorch, rag, sql, transformers","api, fastapi, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, python, rag, sql","docker, flask, prompt engineering, rest api, scikit-learn, statistics","**48.13/100.** Strengths: partial skill coverage (13 matched); meets the 1-year requirement. Gaps: low NLP relevance; education requirement was not matched. Missing JD skills: docker, flask, prompt engineering, rest api, scikit-learn, statistics.",2.0 years,3
+06_Isha_Verma.txt,Isha Verma,isha.verma@example.test,,1.0,B.Tech in Computer Science,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Isha Verma
+isha.verma@example.test
+
+SUMMARY
+Technical professional with 1 year of experience.
+
+SKILLS
+Python, scikit-learn, pandas, NumPy, machine learning, NLP, generative AI, LLM, Flask, Git, GitHub, SQL
+
+EXPERIENCE
+Relevant technical experience — 1 year
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.Tech in Computer Science",47.90788318642356,24.00582228561961,63.1578947368421,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, python, scikit-learn, sql","flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, python, scikit-learn, sql","api, docker, fastapi, prompt engineering, rag, rest api, statistics","**47.91/100.** Strengths: partial skill coverage (12 matched); meets the 1-year requirement. Gaps: low NLP relevance; education requirement was not matched. Missing JD skills: api, docker, fastapi, prompt engineering, rag, rest api, statistics.",1.0 years,4
+09_Aditya_Singh.txt,Aditya Singh,aditya.singh@example.test,,2.5,B.Tech in Computer Science,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Aditya Singh
+aditya.singh@example.test
+
+SUMMARY
+Technical professional with 2.5 years of experience.
+
+SKILLS
+Python, NLP, transformers, LLM, generative AI, RAG, prompt engineering, LangChain, PyTorch, pandas, NumPy, SQL, FastAPI, Git, GitHub
+
+EXPERIENCE
+Relevant technical experience — 2.5 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.Tech in Computer Science",47.07259769170442,18.05606504589288,68.42105263157895,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","api, fastapi, generative ai, git, github, langchain, llm, nlp, numpy, pandas, prompt engineering, python, pytorch, rag, sql, transformers","api, fastapi, generative ai, git, github, llm, nlp, numpy, pandas, prompt engineering, python, rag, sql","docker, flask, machine learning, rest api, scikit-learn, statistics","**47.07/100.** Strengths: partial skill coverage (13 matched); meets the 1-year requirement. Gaps: low NLP relevance; education requirement was not matched. Missing JD skills: docker, flask, machine learning, rest api, scikit-learn, statistics.",2.5 years,5
+12_Arjun_Menon.txt,Arjun Menon,arjun.menon@example.test,,1.0,B.Tech in Data Science,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Arjun Menon
+arjun.menon@example.test
+
+SUMMARY
+Technical professional with 1 year of experience.
+
+SKILLS
+Python, machine learning, scikit-learn, pandas, NumPy, SQL, statistics, Git, GitHub, Flask, NLP
+
+EXPERIENCE
+Relevant technical experience — 1 year
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.Tech in Data Science",45.7943901800419,23.40273841178901,57.89473684210527,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","flask, git, github, machine learning, nlp, numpy, pandas, python, scikit-learn, sql, statistics","flask, git, github, machine learning, nlp, numpy, pandas, python, scikit-learn, sql, statistics","api, docker, fastapi, generative ai, llm, prompt engineering, rag, rest api","**45.79/100.** Strengths: partial skill coverage (11 matched); meets the 1-year requirement. Gaps: low NLP relevance; education requirement was not matched. Missing JD skills: api, docker, fastapi, generative ai, llm, prompt engineering, rag, rest api.",1.0 years,6
+02_Meera_Nair.txt,Meera Nair,meera.nair@example.test,,2.0,M.Tech in Data Science,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Meera Nair
+meera.nair@example.test
+
+SUMMARY
+Technical professional with 2 years of experience.
+
+SKILLS
+Python, SQL, pandas, NumPy, scikit-learn, machine learning, statistics, data analysis, Power BI, Git, REST API, Flask
+
+EXPERIENCE
+Relevant technical experience — 2 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+M.Tech in Data Science",44.473627929891194,20.467711189231892,57.89473684210527,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","api, data analysis, flask, git, machine learning, numpy, pandas, power bi, python, rest api, scikit-learn, sql, statistics","api, flask, git, machine learning, numpy, pandas, python, rest api, scikit-learn, sql, statistics","docker, fastapi, generative ai, github, llm, nlp, prompt engineering, rag","**44.47/100.** Strengths: partial skill coverage (11 matched); meets the 1-year requirement. Gaps: low NLP relevance; education requirement was not matched. Missing JD skills: docker, fastapi, generative ai, github, llm, nlp, prompt engineering, rag.",2.0 years,7
+03_Rohan_Patel.txt,Rohan Patel,rohan.patel@example.test,,4.0,B.E. in Computer Science,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Rohan Patel
+rohan.patel@example.test
+
+SUMMARY
+Technical professional with 4 years of experience.
+
+SKILLS
+Python, Java, SQL, PostgreSQL, Flask, FastAPI, REST API, Docker, Git, GitHub, Linux, microservices
+
+EXPERIENCE
+Relevant technical experience — 4 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.E. in Computer Science",37.74424532908955,13.70066213481889,47.368421052631575,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","api, docker, fastapi, flask, git, github, java, linux, microservices, postgresql, python, rest api, sql","api, docker, fastapi, flask, git, github, python, rest api, sql","generative ai, llm, machine learning, nlp, numpy, pandas, prompt engineering, rag, scikit-learn, statistics","**37.74/100.** Strengths: partial skill coverage (9 matched); meets the 1-year requirement. Gaps: low NLP relevance; education requirement was not matched. Missing JD skills: generative ai, llm, machine learning, nlp, numpy, pandas, prompt engineering, rag, scikit-learn, statistics.",4.0 years,8
+08_Nisha_Reddy.txt,Nisha Reddy,nisha.reddy@example.test,,3.0,M.Tech in Artificial Intelligence,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Nisha Reddy
+nisha.reddy@example.test
+
+SUMMARY
+Technical professional with 3 years of experience.
+
+SKILLS
+Python, machine learning, deep learning, TensorFlow, PyTorch, scikit-learn, NumPy, pandas, OpenCV, Git, Docker, SQL
+
+EXPERIENCE
+Relevant technical experience — 3 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+M.Tech in Artificial Intelligence",37.640641761315266,17.56399923567135,42.10526315789473,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","deep learning, docker, git, machine learning, numpy, opencv, pandas, python, pytorch, scikit-learn, sql, tensorflow","docker, git, machine learning, numpy, pandas, python, scikit-learn, sql","api, fastapi, flask, generative ai, github, llm, nlp, prompt engineering, rag, rest api, statistics","**37.64/100.** Strengths: partial skill coverage (8 matched); meets the 1-year requirement. Gaps: low NLP relevance; education requirement was not matched. Missing JD skills: api, fastapi, flask, generative ai, github, llm, nlp, prompt engineering, rag, rest api, statistics.",3.0 years,9
+10_Priya_Desai.txt,Priya Desai,priya.desai@example.test,,2.0,B.E. in Computer Engineering,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Priya Desai
+priya.desai@example.test
+
+SUMMARY
+Technical professional with 2 years of experience.
+
+SKILLS
+Python, JavaScript, React, Node.js, HTML, CSS, Flask, SQL, PostgreSQL, Git, GitHub, REST API
+
+EXPERIENCE
+Relevant technical experience — 2 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.E. in Computer Engineering",33.048562377115275,11.452945633355577,36.84210526315789,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","api, css, flask, git, github, html, java, javascript, node.js, postgresql, python, react, rest api, sql","api, flask, git, github, python, rest api, sql","docker, fastapi, generative ai, llm, machine learning, nlp, numpy, pandas, prompt engineering, rag, scikit-learn, statistics","**33.05/100.** Strengths: meets the 1-year requirement. Gaps: low NLP relevance; limited direct skill coverage; education requirement was not matched. Missing JD skills: docker, fastapi, generative ai, llm, machine learning, nlp, numpy, pandas, prompt engineering, rag, scikit-learn, statistics.",2.0 years,10
+07_Kabir_Joshi.txt,Kabir Joshi,kabir.joshi@example.test,,5.0,B.E. in Information Technology,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Kabir Joshi
+kabir.joshi@example.test
+
+SUMMARY
+Technical professional with 5 years of experience.
+
+SKILLS
+Java, Python, AWS, Docker, Kubernetes, Git, GitHub, PostgreSQL, REST API, microservices, Jenkins
+
+EXPERIENCE
+Relevant technical experience — 5 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.E. in Information Technology",32.406500023186986,10.026140402403838,36.84210526315789,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","api, aws, docker, git, github, java, jenkins, kubernetes, microservices, postgresql, python, rest api, sql","api, docker, git, github, python, rest api, sql","fastapi, flask, generative ai, llm, machine learning, nlp, numpy, pandas, prompt engineering, rag, scikit-learn, statistics","**32.41/100.** Strengths: meets the 1-year requirement. Gaps: low NLP relevance; limited direct skill coverage; education requirement was not matched. Missing JD skills: fastapi, flask, generative ai, llm, machine learning, nlp, numpy, pandas, prompt engineering, rag, scikit-learn, statistics.",5.0 years,11
+05_Vikram_Rao.txt,Vikram Rao,vikram.rao@example.test,,1.5,B.Sc in Statistics,"SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Vikram Rao
+vikram.rao@example.test
+
+SUMMARY
+Technical professional with 1.5 years of experience.
+
+SKILLS
+SQL, Excel, Power BI, DAX, Python, pandas, NumPy, statistics, data analytics, Tableau
+
+EXPERIENCE
+Relevant technical experience — 1.5 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.Sc in Statistics",29.549938139048233,11.865359607241691,26.31578947368421,100.0,0,"api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, numpy, pandas, prompt engineering, python, rag, rest api, scikit-learn, sql, statistics","data analytics, dax, excel, numpy, pandas, power bi, python, sql, statistics, tableau","numpy, pandas, python, sql, statistics","api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, prompt engineering, rag, rest api, scikit-learn","**29.55/100.** Strengths: meets the 1-year requirement. Gaps: low NLP relevance; limited direct skill coverage; education requirement was not matched. Missing JD skills: api, docker, fastapi, flask, generative ai, git, github, llm, machine learning, nlp, prompt engineering, rag, rest api, scikit-learn.",1.5 years,12
