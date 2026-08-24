@@ -1,0 +1,17 @@
+AI / Machine Learning Engineer
+
+Responsibilities:
+- Build machine-learning models and NLP solutions using Python.
+- Develop data pipelines and perform data preprocessing and analysis.
+- Work with scikit-learn, pandas, NumPy and SQL.
+- Build REST APIs using Flask or FastAPI.
+- Work with LLMs, retrieval-augmented generation (RAG), prompt engineering and transformer-based NLP.
+- Collaborate using Git and GitHub.
+- Evaluate models using statistics and validation.
+
+Requirements:
+- Bachelor's or master's degree in Computer Science, Artificial Intelligence, Data Science, or related field.
+- At least 1 year of relevant experience.
+- Strong Python and SQL skills.
+- Experience with machine learning, NLP and generative AI.
+- Docker is preferred.
