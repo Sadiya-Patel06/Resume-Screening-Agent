@@ -1,0 +1,16 @@
+SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Nisha Reddy
+nisha.reddy@example.test
+
+SUMMARY
+Technical professional with 3 years of experience.
+
+SKILLS
+Python, machine learning, deep learning, TensorFlow, PyTorch, scikit-learn, NumPy, pandas, OpenCV, Git, Docker, SQL
+
+EXPERIENCE
+Relevant technical experience — 3 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+M.Tech in Artificial Intelligence

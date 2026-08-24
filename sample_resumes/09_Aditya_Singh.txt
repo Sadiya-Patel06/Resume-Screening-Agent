@@ -1,0 +1,16 @@
+SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Aditya Singh
+aditya.singh@example.test
+
+SUMMARY
+Technical professional with 2.5 years of experience.
+
+SKILLS
+Python, NLP, transformers, LLM, generative AI, RAG, prompt engineering, LangChain, PyTorch, pandas, NumPy, SQL, FastAPI, Git, GitHub
+
+EXPERIENCE
+Relevant technical experience — 2.5 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.Tech in Computer Science

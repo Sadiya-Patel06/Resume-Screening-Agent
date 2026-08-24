@@ -1,0 +1,16 @@
+SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Aarav Sharma
+aarav.sharma@example.test
+
+SUMMARY
+Technical professional with 3 years of experience.
+
+SKILLS
+Python, SQL, scikit-learn, pandas, NumPy, NLP, machine learning, generative AI, LLM, RAG, LangChain, Flask, FastAPI, REST API, Git, GitHub, Docker, statistics
+
+EXPERIENCE
+Relevant technical experience — 3 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.Tech in Artificial Intelligence and Data Science

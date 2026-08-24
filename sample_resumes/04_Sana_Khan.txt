@@ -1,0 +1,16 @@
+SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Sana Khan
+sana.khan@example.test
+
+SUMMARY
+Technical professional with 2 years of experience.
+
+SKILLS
+Python, SQL, NLP, natural language processing, machine learning, deep learning, generative AI, LLM, transformers, RAG, PyTorch, pandas, NumPy, Git, GitHub, FastAPI
+
+EXPERIENCE
+Relevant technical experience — 2 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.Tech in Artificial Intelligence

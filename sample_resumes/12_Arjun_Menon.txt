@@ -1,0 +1,16 @@
+SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Arjun Menon
+arjun.menon@example.test
+
+SUMMARY
+Technical professional with 1 year of experience.
+
+SKILLS
+Python, machine learning, scikit-learn, pandas, NumPy, SQL, statistics, Git, GitHub, Flask, NLP
+
+EXPERIENCE
+Relevant technical experience — 1 year
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.Tech in Data Science

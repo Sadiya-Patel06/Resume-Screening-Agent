@@ -1,0 +1,16 @@
+SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Zoya Malik
+zoya.malik@example.test
+
+SUMMARY
+Technical professional with 2 years of experience.
+
+SKILLS
+Python, SQL, machine learning, NLP, generative AI, LLM, RAG, transformers, prompt engineering, LangChain, scikit-learn, pandas, NumPy, FastAPI, REST API, Git, Docker
+
+EXPERIENCE
+Relevant technical experience — 2 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+M.Tech in Artificial Intelligence and Data Science

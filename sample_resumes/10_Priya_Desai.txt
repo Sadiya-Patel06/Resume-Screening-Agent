@@ -1,0 +1,16 @@
+SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Priya Desai
+priya.desai@example.test
+
+SUMMARY
+Technical professional with 2 years of experience.
+
+SKILLS
+Python, JavaScript, React, Node.js, HTML, CSS, Flask, SQL, PostgreSQL, Git, GitHub, REST API
+
+EXPERIENCE
+Relevant technical experience — 2 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.E. in Computer Engineering

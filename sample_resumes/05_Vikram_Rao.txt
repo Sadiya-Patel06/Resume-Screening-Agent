@@ -1,0 +1,16 @@
+SYNTHETIC TEST RESUME — NOT A REAL PERSON
+Vikram Rao
+vikram.rao@example.test
+
+SUMMARY
+Technical professional with 1.5 years of experience.
+
+SKILLS
+SQL, Excel, Power BI, DAX, Python, pandas, NumPy, statistics, data analytics, Tableau
+
+EXPERIENCE
+Relevant technical experience — 1.5 years
+Built software, data or AI solutions using the skills listed above.
+
+EDUCATION
+B.Sc in Statistics
