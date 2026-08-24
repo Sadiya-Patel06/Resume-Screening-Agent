@@ -1,6 +1,9 @@
 # 📄 Resume Screening Agent
 
-An intermediate-level AI Resume Screening Agent that parses multiple resumes, compares them against a Job Description (JD), calculates relevance scores using NLP, ranks candidates, explains the ranking, and exports the results as CSV/JSON.
+An AI-powered Resume Screening Agent that evaluates and ranks multiple resumes against a given Job Description (JD), generating an ordered and scored shortlist with clear, transparent reasoning.
+
+The application helps recruiters streamline the initial screening process by automatically extracting relevant candidate information, matching resumes against job requirements, calculating relevance scores and ranking candidates. It also supports exporting the screening results for efficient review and decision-making.
+
 
 ---
 
@@ -170,13 +173,12 @@ resume_screening_agent/
 │   └── job_description.txt
 │
 ├── sample_resumes/
-│   ├── README.md
 │   ├── 01_Aarav_Sharma.txt
 │   ├── 02_Meera_Nair.txt
-│   ├── 03_Rohan_Patel.txt
+│   ├── 03_Rohan_Patel.docx
 │   ├── 04_Sana_Khan.txt
 │   ├── 05_Vikram_Rao.txt
-│   ├── 06_Isha_Verma.txt
+│   ├── 06_Isha_Verma.pdf
 │   ├── 07_Kabir_Joshi.txt
 │   ├── 08_Nisha_Reddy.txt
 │   ├── 09_Aditya_Singh.txt
@@ -739,10 +741,3 @@ The current implementation has several deliberate limitations:
 * Education extraction is keyword-based.
 * The ranking should be treated as an initial shortlist rather than a final hiring decision.
 
----
-
-# 🌐 GitHub Repository
-
-**Public Repository:** `<ADD-YOUR-GITHUB-REPOSITORY-URL-HERE>`
-
----
