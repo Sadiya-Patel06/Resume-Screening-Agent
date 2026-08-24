@@ -201,11 +201,8 @@ resume_screening_agent/
 ## 1. Clone the repository
 
 ```bash
-git clone <YOUR_PUBLIC_GITHUB_REPOSITORY_URL>
+git clone <https://github.com/Sadiya-Patel06/Resume-Screening-Agent>
 cd resume_screening_agent
-```
-
-Replace `<YOUR_PUBLIC_GITHUB_REPOSITORY_URL>` with the public GitHub repository URL submitted for evaluation.
 
 ---
 
