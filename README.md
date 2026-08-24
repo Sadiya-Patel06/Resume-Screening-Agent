@@ -1,219 +1,153 @@
 # 📄 Resume Screening Agent
 
-An NLP-powered Resume Screening Agent that ranks multiple resumes against a given Job Description (JD) and produces an ordered, scored shortlist with transparent reasoning.
-
-The application is designed to help recruiters quickly screen a batch of candidates by automatically extracting relevant information from resumes, comparing candidates with the job requirements, calculating relevance scores, ranking candidates, and exporting the results.
+An intermediate-level AI Resume Screening Agent that parses multiple resumes, compares them against a Job Description (JD), calculates relevance scores using NLP, ranks candidates, explains the ranking, and exports the results as CSV/JSON.
 
 ---
 
 ## 🚀 Project Overview
 
-Recruiters often need to review a large number of resumes for a single job opening. Manually comparing every resume with a Job Description can be time-consuming and inconsistent.
+Recruiters often need to evaluate many resumes against a single Job Description. Manually comparing skills, experience, and education is time-consuming and inconsistent.
 
-The **Resume Screening Agent** automates the initial screening process.
+This project automates the initial screening process.
 
-It accepts:
+The agent accepts:
 
 * A Job Description
-* Multiple resumes in PDF, DOCX, or TXT format
+* Multiple resumes in **PDF, DOCX, or TXT** format
 
 It then:
 
-1. Parses the uploaded resumes.
+1. Parses the resumes.
 2. Extracts candidate information.
-3. Identifies skills, experience, and education.
-4. Compares resume content with the Job Description using NLP.
-5. Calculates a relevance score.
-6. Ranks all candidates.
-7. Provides reasoning for every candidate's score.
-8. Exports the final shortlist as CSV or JSON.
+3. Identifies skills.
+4. Extracts explicitly stated experience.
+5. Extracts education information.
+6. Compares each resume with the JD using NLP similarity.
+7. Calculates a weighted relevance score.
+8. Ranks candidates from highest to lowest.
+9. Provides reasoning for each candidate's score.
+10. Exports the ranked shortlist as CSV and JSON.
 
-The system can process **10+ resumes in a single run**.
-
----
-
-## ✨ Key Features
-
-### 📑 Resume Parsing
-
-Supports:
-
-* PDF
-* DOCX
-* TXT
-
-The parser extracts available information such as:
-
-* Candidate name
-* Email
-* Skills
-* Years of experience
-* Education
-* Education
-* Missing skills
-
-Missing information is not fabricated. If a value cannot be extracted, the system reports it as unavailable.
+The application is designed as a **decision-support tool** and does not replace human review.
 
 ---
 
-### 📝 Job Description Processing
+# 🎯 Agent-Specific Deliverables
 
-The application accepts a Job Description through:
+This project satisfies the required Resume Screening Agent deliverables.
 
-* Text input
-* TXT file
-* DOCX file
-* PDF file
-
-The JD is analyzed to identify relevant technical skills, experience requirements, and education requirements.
+| Requirement                | Included                     |
+| -------------------------- | ---------------------------- |
+| Job Description            | ✅ `data/job_description.txt` |
+| Sample resume folder       | ✅ `sample_resumes/`          |
+| 10+ resumes in one run     | ✅ 12 sample resumes          |
+| PDF support                | ✅                            |
+| DOCX support               | ✅                            |
+| TXT support                | ✅                            |
+| NLP similarity             | ✅ TF-IDF + cosine similarity |
+| Scored candidate ranking   | ✅                            |
+| Ranking reasoning          | ✅                            |
+| CSV output                 | ✅                            |
+| JSON output                | ✅                            |
+| Scoring-method explanation | ✅ `SCORING_METHOD.md`        |
+| Runnable UI                | ✅ Streamlit                  |
+| Batch execution            | ✅ `run_agent.py`             |
 
 ---
 
-### 🧠 NLP-Based Relevance Scoring
-
-The project uses **TF-IDF vectorization and cosine similarity** to measure the textual relevance between the Job Description and each resume.
-
-This allows the system to compare the overall terminology and content of a candidate's resume with the requirements of the position.
-
----
-
-## 📊 Scoring Methodology
-
-Each candidate receives a final score between **0 and 100**.
-
-The score is calculated using four components:
-
-| Component        | Weight |
-| ---------------- | -----: |
-| NLP Relevance    |    45% |
-| Skill Match      |    35% |
-| Experience Match |    15% |
-| Education Match  |     5% |
-
-### Final Score
+# 🏗️ Architecture
 
 ```text
-Final Score =
-    0.45 × NLP Relevance
-  + 0.35 × Skill Match
-  + 0.15 × Experience Match
-  + 0.05 × Education Match
-```
-
-### 1. NLP Relevance — 45%
-
-TF-IDF is applied to the Job Description and resume text.
-
-Cosine similarity is then used to determine how closely the resume content matches the JD.
-
-### 2. Skill Match — 35%
-
-Technical skills identified in the Job Description are compared with skills identified in the resume.
-
-```text
-Skill Score =
-Matched JD Skills / Identified JD Skills × 100
-```
-
-The system also reports:
-
-* Matched skills
-* Missing skills
-
-### 3. Experience Match — 15%
-
-The system extracts explicit experience information such as:
-
-```text
-3 years of experience
-2.5 years of experience
-5+ years of experience
-```
-
-If the Job Description contains a minimum experience requirement, the candidate's extracted experience is compared against it.
-
-### 4. Education Match — 5%
-
-The system checks whether the education level or degree requested by the Job Description appears in the candidate's resume.
-
----
-
-## 🏆 Candidate Ranking
-
-After calculating the scores, candidates are sorted in descending order.
-
-The output contains:
-
-```text
-Rank
-Candidate Name
-Final Score
-NLP Score
-Skill Score
-Experience Score
-Education Score
-Matched Skills
-Missing Skills
-Experience
-Education
-Reasoning
-```
-
-The ranking is deterministic and uses additional score components as tie-breakers.
-
----
-
-## 💡 Explainable Screening
-
-The system does not return only a numerical score.
-
-For every candidate, it provides reasoning such as:
-
-* Strong or moderate NLP relevance
-* Skill coverage
-* Whether the experience requirement is met
-* Education match
-* Missing Job Description skills
-
-This makes the shortlist easier to inspect and understand.
-
----
-
-## 🖥️ User Interface
-
-The project uses **Streamlit** to provide a simple recruiter-friendly interface.
-
-### Workflow
-
-```text
-Job Description
-      ↓
-Upload Resumes
-      ↓
-Resume Parsing
-      ↓
-Information Extraction
-      ↓
-NLP Similarity
-      ↓
-Skill Matching
-      ↓
-Experience Matching
-      ↓
-Education Matching
-      ↓
-Final Score
-      ↓
-Candidate Ranking
-      ↓
-Reasoning
-      ↓
-CSV / JSON Export
+                    ┌─────────────────────┐
+                    │   Job Description   │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Resume Uploads     │
+                    │ PDF / DOCX / TXT     │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Document Parser    │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+             ┌─────────────────────────────────┐
+             │ Candidate Information Extraction │
+             │                                 │
+             │ • Name                          │
+             │ • Contact                       │
+             │ • Skills                        │
+             │ • Experience                    │
+             │ • Education                     │
+             └────────────────┬────────────────┘
+                              │
+                              ▼
+                    ┌─────────────────────┐
+                    │    NLP Similarity   │
+                    │ TF-IDF + Cosine     │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Scoring Engine    │
+                    │                     │
+                    │ NLP          45%    │
+                    │ Skills       35%    │
+                    │ Experience   15%    │
+                    │ Education     5%    │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Candidate Ranking   │
+                    └──────────┬──────────┘
+                               │
+                 ┌─────────────┴─────────────┐
+                 ▼                           ▼
+       ┌──────────────────┐        ┌──────────────────┐
+       │ Reasoning /      │        │ CSV / JSON       │
+       │ Explanation      │        │ Export           │
+       └──────────────────┘        └──────────────────┘
 ```
 
 ---
 
-## 📂 Project Structure
+# 🛠️ Tech Stack
+
+### Programming Language
+
+* Python
+
+### Frontend / UI
+
+* Streamlit
+
+### NLP / Machine Learning
+
+* Scikit-learn
+* TF-IDF Vectorization
+* Cosine Similarity
+
+### Document Processing
+
+* PyPDF
+* python-docx
+
+### Data Processing
+
+* Pandas
+
+### Output
+
+* CSV
+* JSON
+
+---
+
+# 📁 Project Structure
 
 ```text
 resume_screening_agent/
@@ -239,7 +173,15 @@ resume_screening_agent/
 │   ├── README.md
 │   ├── 01_Aarav_Sharma.txt
 │   ├── 02_Meera_Nair.txt
-│   ├── ...
+│   ├── 03_Rohan_Patel.txt
+│   ├── 04_Sana_Khan.txt
+│   ├── 05_Vikram_Rao.txt
+│   ├── 06_Isha_Verma.txt
+│   ├── 07_Kabir_Joshi.txt
+│   ├── 08_Nisha_Reddy.txt
+│   ├── 09_Aditya_Singh.txt
+│   ├── 10_Priya_Desai.txt
+│   ├── 11_Zoya_Malik.txt
 │   └── 12_Arjun_Menon.txt
 │
 ├── output/
@@ -252,99 +194,174 @@ resume_screening_agent/
 
 ---
 
-## 🛠️ Technologies Used
+# ⚙️ Setup Instructions
 
-### Programming Language
-
-* Python
-
-### Frontend / UI
-
-* Streamlit
-
-### NLP / Machine Learning
-
-* Scikit-learn
-* TF-IDF
-* Cosine Similarity
-
-### Document Processing
-
-* PyPDF
-* python-docx
-
-### Data Processing
-
-* Pandas
-
-### Output Formats
-
-* CSV
-* JSON
-
-### Development Tools
-
-* VS Code
-* Git
-* GitHub
-
----
-
-## ⚙️ Installation
-
-### 1. Clone the repository
+## 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone <YOUR_PUBLIC_GITHUB_REPOSITORY_URL>
 cd resume_screening_agent
 ```
 
-### 2. Create a virtual environment
+Replace `<YOUR_PUBLIC_GITHUB_REPOSITORY_URL>` with the public GitHub repository URL submitted for evaluation.
 
-Windows:
+---
+
+## 2. Create a virtual environment
+
+### Windows
 
 ```powershell
 python -m venv .venv
-.venv\Scripts\activate
 ```
 
-macOS/Linux:
+Activate it:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+### macOS / Linux
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### 3. Install dependencies
+---
+
+## 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
+No API key is required.
+
+The application runs locally using open-source Python libraries.
+
 ---
 
-## ▶️ Run the Application
+# ▶️ Run the Agent
 
-Start the Streamlit application:
+## Option 1 — Streamlit UI
+
+Run:
 
 ```bash
 streamlit run app.py
 ```
 
-The application will open in your browser.
+The Streamlit application will open in the browser.
+
+### Using the UI
+
+### Step 1 — Add Job Description
+
+Either:
+
+* Upload a `.txt`, `.docx`, or `.pdf` Job Description
+
+or
+
+* Paste the Job Description into the text area.
+
+### Step 2 — Upload Resumes
+
+Upload multiple:
+
+* `.pdf`
+* `.docx`
+* `.txt`
+
+resumes.
+
+The application supports 10+ resumes in a single screening run.
+
+### Step 3 — Start Screening
+
+Click:
+
+```text
+🚀 Screen & Rank
+```
+
+The agent will parse all resumes and calculate the candidate scores.
+
+### Step 4 — Review Ranking
+
+The UI displays:
+
+* Rank
+* Candidate name
+* Final score
+* NLP relevance
+* Skill score
+* Experience score
+* Education score
+* Matched skills
+* Missing skills
+
+### Step 5 — Review Reasoning
+
+Each candidate has an expandable explanation showing why the candidate received the calculated score.
+
+### Step 6 — Export
+
+Download:
+
+```text
+ranked_candidates.csv
+ranked_candidates.json
+```
 
 ---
 
-## 🧪 Run the Batch Version
+# 🖥️ Batch / CLI Execution
 
-The project also includes a command-line runner.
+The project can also be executed without the Streamlit interface.
+
+The included sample data can be processed with:
 
 ```bash
-python run_agent.py \
-    --jd data/job_description.txt \
-    --resumes sample_resumes \
-    --output output
+python run_agent.py --jd data/job_description.txt --resumes sample_resumes --output output
 ```
+
+The command:
+
+1. Reads the Job Description.
+2. Reads every supported resume in `sample_resumes/`.
+3. Parses candidate information.
+4. Calculates relevance scores.
+5. Ranks the candidates.
+6. Creates CSV and JSON outputs.
+
+Expected output files:
+
+```text
+output/
+├── ranked_candidates.csv
+└── ranked_candidates.json
+```
+
+---
+
+# 🧪 Reproduce the Sample Demo
+
+The repository contains:
+
+* 1 sample Job Description
+* 12 sample resumes
+
+The sample resumes are explicitly labelled as **synthetic test resumes** and are included only for reproducible testing and demonstration.
+
+Run:
+
+```bash
+python run_agent.py --jd data/job_description.txt --resumes sample_resumes --output output
+```
+
+This processes all 12 resumes in one run.
 
 The generated files are:
 
@@ -355,67 +372,194 @@ output/ranked_candidates.json
 
 ---
 
-## 📥 Using the Web Application
+# 📊 Scoring Method
 
-### Step 1 — Add Job Description
-
-Paste the JD into the text area or upload a:
-
-* PDF
-* DOCX
-* TXT
-
-### Step 2 — Upload Resumes
-
-Upload multiple resumes simultaneously.
-
-The application supports:
+The final candidate score is calculated on a scale of **0–100**.
 
 ```text
-PDF
-DOCX
-TXT
+Final Score =
+    45% NLP Relevance
+  + 35% Skill Match
+  + 15% Experience Match
+  +  5% Education Match
 ```
 
-For the challenge requirement, upload **10 or more resumes** in a single run.
+## 1. NLP Relevance — 45%
 
-### Step 3 — Start Screening
+The Job Description and resume are converted into TF-IDF vectors.
 
-Click:
+Cosine similarity is then calculated between the two vectors.
+
+This measures the textual relevance between the resume and the Job Description.
+
+---
+
+## 2. Skill Match — 35%
+
+The system identifies technical skills appearing in the Job Description and checks which of those skills are present in the resume.
 
 ```text
-🚀 Screen & Rank
+Skill Score =
+Matched JD Skills / Identified JD Skills × 100
 ```
 
-The system processes all readable resumes.
+The skill score contributes 35% to the final score.
 
-### Step 4 — Review Ranking
+---
 
-The application displays an ordered shortlist containing each candidate's score and extracted information.
+## 3. Experience Match — 15%
 
-### Step 5 — Review Reasoning
-
-Expand an individual candidate to view:
-
-* Score explanation
-* Matched skills
-* Missing skills
-* Extracted experience
-* Education information
-
-### Step 6 — Export Results
-
-Download:
+The parser identifies explicitly stated experience such as:
 
 ```text
-ranked_candidates.csv
+2 years of experience
+3+ years of experience
+1.5 years of experience
 ```
 
-or
+If the JD specifies a minimum experience requirement, the candidate's extracted experience is compared against it.
+
+---
+
+## 4. Education Match — 5%
+
+The system checks education-related requirements in the JD against education information extracted from the resume.
+
+---
+
+# 🧠 Why TF-IDF + Cosine Similarity?
+
+TF-IDF with cosine similarity was selected because it provides:
+
+* Local execution
+* No API key
+* No external service dependency
+* Fast processing
+* Deterministic results
+* Easy reproducibility
+* Easy inspection of the scoring pipeline
+
+It is suitable for an intermediate-level technical screening agent while keeping the project lightweight.
+
+---
+
+# 💡 Reasoning / Explainability
+
+The agent does not only return a numerical score.
+
+For each candidate it provides:
+
+* Overall score
+* NLP relevance
+* Skill coverage
+* Matched JD skills
+* Missing JD skills
+* Experience comparison
+* Education match
+* Strengths
+* Gaps
+
+Example reasoning format:
 
 ```text
-ranked_candidates.json
+Overall score: 82.45/100
+
+Strengths:
+- Strong NLP relevance
+- Strong skill coverage
+- Meets the required experience
+- Education appears to match
+
+Gaps:
+- Missing identified JD skills: Docker
 ```
+
+The reasoning is generated from information extracted from the resume.
+
+The system does not invent candidate qualifications.
+
+---
+
+# 📤 Output Format
+
+## CSV
+
+The CSV contains fields including:
+
+```text
+rank
+candidate_name
+final_score
+nlp_score
+skill_score
+experience_score
+education_score
+jd_skills
+skills
+matched_skills
+missing_skills
+experience_years
+education_summary
+reasoning
+source_file
+```
+
+## JSON
+
+The JSON contains structured candidate records including:
+
+```json
+{
+  "rank": 1,
+  "candidate_name": "...",
+  "final_score": 0,
+  "nlp_score": 0,
+  "skill_score": 0,
+  "experience_score": 0,
+  "education_score": 0,
+  "matched_skills": [],
+  "missing_skills": [],
+  "reasoning": "..."
+}
+```
+
+---
+
+# 📸 Sample Inputs and Outputs
+
+## Sample Input
+
+### Job Description
+
+```text
+AI / Machine Learning Engineer
+
+Requirements:
+- Strong Python and SQL skills.
+- Experience with machine learning, NLP and generative AI.
+- At least 1 year of relevant experience.
+- Bachelor's or master's degree in a related field.
+- Experience with REST APIs, Git and Docker is preferred.
+```
+
+### Resumes
+
+The `sample_resumes/` folder contains 12 synthetic resumes covering different combinations of:
+
+* Python
+* SQL
+* Machine Learning
+* NLP
+* Generative AI
+* LLM
+* RAG
+* Flask
+* FastAPI
+* Git
+* Docker
+* Data Analytics
+* Backend Development
+* Cloud Development
 
 ---
 
@@ -435,51 +579,170 @@ The actual values are generated from the uploaded Job Description and resumes.
 
 ---
 
-## 🧪 Sample Data
 
-The repository contains a sample Job Description and **12 synthetic test resumes**.
+# 🔍 Handling Missing Information
 
-These files are included only to demonstrate the required 10+ resume batch-processing capability.
+The system does not fabricate candidate information.
 
-For actual recruitment screening, replace the sample files with real resumes.
-
----
-
-## 🔍 Testing
-
-The project includes automated tests for the screening engine.
-
-Run:
-
-```bash
-pytest tests/
-```
-
-The tests verify the ranking pipeline and scoring behavior.
-
----
-
-## 📄 Scoring Documentation
-
-A separate explanation of the scoring methodology is available in:
+For example, if experience cannot be explicitly extracted from a resume:
 
 ```text
-SCORING_METHOD.md
+Experience: Not explicitly stated
 ```
 
-This document explains:
+If a skill is not detected:
 
-* NLP scoring
-* Skill matching
-* Experience scoring
-* Education scoring
-* Final score calculation
-* Ranking logic
-* Limitations
+```text
+Missing JD skill: <skill>
+```
 
-## 👩‍💻 Purpose
+The missing information is not automatically assumed to be present.
 
-This project demonstrates how Natural Language Processing can be applied to automate the first stage of resume screening.
+---
 
-It combines document parsing, information extraction, NLP similarity, rule-based matching, weighted scoring, ranking, explainability, and data export into a single application.
+# ⚖️ Fairness and Responsible Use
 
+This application is intended as a technical screening and decision-support tool.
+
+It should **not** be used as the sole basis for employment decisions.
+
+The scoring system does not intentionally use protected characteristics such as:
+
+* Gender
+* Religion
+* Race
+* Age
+* Disability
+* Other sensitive personal characteristics
+
+Recruiters should review the original resumes and use human judgment before making hiring decisions.
+
+---
+
+# 🔐 API Keys / Configuration
+
+No API key is required.
+
+The application runs locally using:
+
+```text
+Python
+Streamlit
+Scikit-learn
+PyPDF
+python-docx
+Pandas
+```
+
+Therefore there is no `.env` configuration required for the current implementation.
+
+---
+
+# 🧪 Testing
+
+A basic automated test is included in:
+
+```text
+tests/test_agent.py
+```
+
+Run it with:
+
+```bash
+pytest
+```
+
+if `pytest` is installed.
+
+The test verifies that:
+
+* Multiple candidates can be screened.
+* Candidates are ranked.
+* The higher-relevance candidate receives the higher score.
+* Ranking starts from 1.
+
+---
+
+# 🔄 Tradeoffs
+
+## Why not use an LLM API?
+
+An LLM API could provide richer semantic understanding and explanations, but it introduces:
+
+* API key requirements
+* Cost
+* Rate limits
+* Network dependency
+* Non-deterministic responses
+
+For this submission, a local deterministic pipeline makes the project easier for reviewers to run.
+
+---
+
+## Why not use transformer embeddings?
+
+Transformer embeddings can provide stronger semantic similarity than TF-IDF, especially when two resumes use different terminology for similar concepts.
+
+However, transformer models introduce:
+
+* Larger dependencies
+* Model downloads
+* Higher memory requirements
+* Longer setup time
+
+TF-IDF was chosen to keep the project lightweight and reproducible.
+
+---
+
+## Why use weighted scoring?
+
+A single NLP similarity score would not sufficiently distinguish candidates.
+
+The weighted approach separates:
+
+```text
+NLP relevance
+Skill match
+Experience
+Education
+```
+
+This also makes the result easier to explain to recruiters.
+
+---
+
+# 🚀 What I Would Improve With More Time
+
+With additional development time, I would add:
+
+1. Transformer-based sentence embeddings for stronger semantic matching.
+2. Better extraction of years of experience from employment date ranges.
+3. Required vs preferred skill weighting.
+4. Experience and education requirement parsing with more robust NLP.
+5. OCR support for scanned/image-based PDFs.
+6. Candidate comparison charts and analytics.
+7. Configurable scoring weights through the UI.
+8. Human-review workflow for shortlisted candidates.
+9. Bias and fairness evaluation before production use.
+10. Optional embedding-based ranking as an alternative to TF-IDF.
+
+---
+
+# 📌 Limitations
+
+The current implementation has several deliberate limitations:
+
+* TF-IDF measures lexical similarity rather than deep semantic similarity.
+* Skill extraction uses a technical skill vocabulary.
+* Experience extraction depends on explicitly stated experience text.
+* Scanned PDFs without an extractable text layer may require OCR.
+* Education extraction is keyword-based.
+* The ranking should be treated as an initial shortlist rather than a final hiring decision.
+
+---
+
+# 🌐 GitHub Repository
+
+**Public Repository:** `<ADD-YOUR-GITHUB-REPOSITORY-URL-HERE>`
+
+---
